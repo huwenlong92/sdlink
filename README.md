@@ -19,10 +19,6 @@
 
 ![SDLink 登录管理端](https://raw.githubusercontent.com/huwenlong92/sdlink/main/docs/screenshots/login.png)
 
-**服务器信息与 SDSub 自动上报**
-
-![SDLink 设置与 SDSub 自动上报](https://raw.githubusercontent.com/huwenlong92/sdlink/main/docs/screenshots/settings.png)
-
 ## 下载
 
 可用版本与平台以 Releases 中实际列出的完整包和 SHA256 校验文件为准。也可使用已验证的本地完整离线包。
