@@ -11,6 +11,18 @@
 
 此 GitHub 仓库只提供公开说明、安装文件与发行资产，不承载后端和前端源码。
 
+## 界面预览
+
+截图来自本地演示环境，服务器名称和地址均为示例，不含真实凭据。
+
+**登录管理端**
+
+![SDLink 登录管理端](https://raw.githubusercontent.com/huwenlong92/sdlink/main/docs/screenshots/login.png)
+
+**服务器信息与 SDSub 自动上报**
+
+![SDLink 设置与 SDSub 自动上报](https://raw.githubusercontent.com/huwenlong92/sdlink/main/docs/screenshots/settings.png)
+
 ## 下载
 
 可用版本与平台以 Releases 中实际列出的完整包和 SHA256 校验文件为准。也可使用已验证的本地完整离线包。
