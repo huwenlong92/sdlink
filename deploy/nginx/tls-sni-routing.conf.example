@@ -1,0 +1,19 @@
+# Include inside the top-level stream block, never inside http.
+upstream https_backend {
+    server 127.0.0.1:8443;
+}
+upstream reality_backend {
+    server 127.0.0.1:10000;
+}
+map $ssl_preread_server_name $tcp_backend {
+    www.cloudflare.com reality_backend;
+    default https_backend;
+}
+server {
+    listen 443;
+    listen [::]:443;
+    ssl_preread on;
+    proxy_pass $tcp_backend;
+    proxy_connect_timeout 5s;
+    proxy_timeout 1h;
+}

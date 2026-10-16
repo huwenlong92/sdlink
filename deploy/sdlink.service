@@ -1,0 +1,27 @@
+[Unit]
+Description=SDLink node management
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=sdlink
+Group=sdlink
+WorkingDirectory=/var/lib/sdlink
+EnvironmentFile=/etc/sdlink/sdlink.env
+Environment=GIN_MODE=release
+ExecStart=/usr/local/bin/sdlink -config /etc/sdlink/config.yaml
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=30
+KillMode=control-group
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/sdlink
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

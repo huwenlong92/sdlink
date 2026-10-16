@@ -1,0 +1,11 @@
+addr: localhost:9020
+database:
+  driver: sqlite
+  dsn: /var/lib/sdlink/sdlink.db?_pragma=journal_mode(WAL)&_pragma=busy_timeout(5000)
+session:
+  type: cookie
+  key: sdlink_session
+  max_age: 28800
+admin_username: admin
+# Explicit externally reachable IP. Empty falls back to local NIC discovery, NOT an external public-IP lookup.
+public_ip: ""
